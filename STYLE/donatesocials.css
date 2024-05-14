@@ -1,0 +1,117 @@
+ul {
+  list-style: none;
+}
+
+.example-2 {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  margin: 400px 0px 0px 1500px;
+  z-index: 2;
+}
+.example-2 .icon-content {
+  margin: 0 6px;
+  position: relative;
+}
+.example-2 .icon-content .tooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-family: "Century Gothic";
+  padding: 6px 10px;
+  border-radius: 15px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+.example-2 .icon-content:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: -50px;
+}
+.example-2 .icon-content a {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  padding: 5px 5px 5px;
+  border-radius: 20%;
+  color: #bd081c;
+  background-color: #dfdcc1;
+  transition: all 0.3s ease-in-out;
+}
+.example-2 .icon-content a:hover {
+  box-shadow: 3px 2px 45px 0px #dfdcc1;
+}
+.example-2 .icon-content a svg {
+  position: relative;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+}
+.example-2 .icon-content a:hover {
+  color: #dfdcc1;
+}
+.example-2 .icon-content a:hover path {
+  fill: #dfdcc1;
+}
+.example-2 .icon-content a .filled {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+}
+.example-2 .icon-content a:hover .filled {
+  height: 100%;
+}
+.example-2 .icon-content a[data-social="facebook"] .filled,
+.example-2 .icon-content a[data-social="facebook"] ~ .tooltip {
+  background-color: #4267b2;
+}
+.example-2 .icon-content a[data-social="pinterest"] .filled,
+.example-2 .icon-content a[data-social="pinterest"] ~ .tooltip {
+  background-color: #bd081c;
+}
+.example-2 .icon-content a[data-social="youtube"] .filled,
+.example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
+  background-color: #ff0000;
+}
+.example-2 .icon-content a[data-social="instagram"] .filled,
+.example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
+  background: radial-gradient(
+      circle farthest-corner at 35% 90%,
+      #fec564,
+      transparent 50%
+    ),
+    radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%),
+    radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%),
+    radial-gradient(
+      ellipse farthest-corner at 20% -50%,
+      #5258cf,
+      transparent 50%
+    ),
+    radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%),
+    radial-gradient(
+      ellipse farthest-corner at 60% -20%,
+      #893dc2,
+      transparent 50%
+    ),
+    radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent),
+    linear-gradient(
+      #6559ca,
+      #bc318f 30%,
+      #e33f5f 50%,
+      #f77638 70%,
+      #fec66d 100%
+    );
+}
